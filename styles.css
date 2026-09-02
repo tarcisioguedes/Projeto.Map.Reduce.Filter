@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -18,27 +17,33 @@ body {
     gap: 20px;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que os botões se organizem em telas menores */
 }
 
 button {
     padding: 10px;
     font-weight: bold;
-    color:black;
-    background-color:#79cb15;
+    color: black;
+    background-color: #79cb15;
     border-radius: 5px;
     cursor: pointer;
     width: 120px;
+    border: none;
 }
 
 button:hover {
-   opacity: 0.8;
+    opacity: 0.8;
 }
 
 ul {
     list-style: none;
     display: grid;
     gap: 20px;
-    grid-template-columns: 200px 200px 200px;
+    /* Grid responsivo: cria colunas automáticas ajustando-se à largura da tela */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 30px 20px;
     justify-content: center;
 }
 
@@ -61,4 +66,3 @@ p {
     color: #79cb15;
     font-weight: bold;
 }
-
