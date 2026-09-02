@@ -12,6 +12,14 @@ Simulando a interface de um cardápio digital de uma hamburgueria artesanal, a a
 
 ---
 
+### 🌐 Teste a Aplicação Online
+
+A aplicação está publicada e pronta para ser testada diretamente no seu navegador! 
+
+👉 **[Clique aqui para abrir a aplicação no GitHub Pages](https://tarcisioguedes.github.io/Projeto.Map.Reduce.Filter/)**
+
+---
+
 ## ⚡ Métodos de Array em Ação
 
 | Método | Botão na Interface | O que faz por baixo dos panos? |
