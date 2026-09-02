@@ -60,3 +60,4 @@ botãoMostrarTudo.addEventListener('click', () => mostrarTudo(menuOptions))
 botãoMapear.addEventListener('click', aplicarDesconto)
 botãoSomarTudo.addEventListener('click', somarTudo)
 botãoFiltrar.addEventListener('click', filtrarVeganos)
+
