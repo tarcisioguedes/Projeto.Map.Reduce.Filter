@@ -12,12 +12,13 @@ body {
 }
 
 .caixa-botões {
-    margin: 30px 0;
+    /* Aumentado o topo para 60px para afastar mais da borda superior */
+    margin: 60px 0 30px 0; 
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que os botões se organizem em telas menores */
+    flex-wrap: wrap;
 }
 
 button {
@@ -39,8 +40,8 @@ ul {
     list-style: none;
     display: grid;
     gap: 20px;
-    /* Grid responsivo: cria colunas automáticas ajustando-se à largura da tela */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Ajustado minmax para 160px para encaixar melhor em telas menores */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px 30px 20px;
@@ -50,12 +51,21 @@ ul {
 li {
     border: 2px solid #8133ff;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 img {
     width: 100%;
+    /* Limita a altura da imagem para não ficar gigante em mobile */
+    max-height: 150px; 
+    /* Mantém a proporção da imagem sem distorcer */
+    object-fit: contain; 
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -65,4 +75,21 @@ p {
 .item-preço {
     color: #79cb15;
     font-weight: bold;
+}
+
+/* Regras de fine-tuning para telas muito pequenas */
+@media (max-width: 480px) {
+    .caixa-botões {
+        margin: 80px 0 20px 0; /* Espaço ainda maior no topo do mobile, se necessário */
+        gap: 12px;
+    }
+
+    button {
+        width: 100px;
+        font-size: 13px;
+    }
+
+    img {
+        max-height: 110px; /* Reduz ainda mais o tamanho da imagem no celular */
+    }
 }
